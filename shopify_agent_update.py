@@ -22,7 +22,7 @@ from langchain_core.prompts.chat import (
 from langchain.agents import create_openai_tools_agent
 from langchain.agents.agent import AgentExecutor
 
-OPENAI_API_KEY = "sk-proj-Jgat6n1oZs9DI5MMatB7T3BlbkFJ5yRIHLV1ZoQmuWdwTnLG"
+OPENAI_API_KEY = "OPENAI_API_KEY"
 
 def get_db_connection_string(store_handle):
     return f"sqlite:///{store_handle}_shopify_data.db"
@@ -255,7 +255,7 @@ def get_latest_id(engine, table):
 
 SHOP_HANDLE = 'Lemmon-24april'
 API_VERSION = '2024-04'
-TOKEN = "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"
+TOKEN = "SHOPIFY_API_KEY"
 update_data_in_db(SHOP_HANDLE, API_VERSION, TOKEN)
 
 db = SQLDatabase.from_uri(f"sqlite:///{SHOP_HANDLE}_shopify_data.db")
